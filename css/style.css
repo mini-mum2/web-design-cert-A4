@@ -1,0 +1,151 @@
+* {padding: 0; margin: 0;}
+ul {list-style: none;}
+a {color: inherit; text-decoration: inherit;}
+img {max-width: 100%;}
+html {background: #fff; color:#333}
+
+/* style */
+#wrap header {
+    width: 1200px; height: 100px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+    position: relative; z-index: 500;
+}
+#wrap header h1 {
+    display: flex; align-items: center;
+}
+#wrap header h1 a {}
+#wrap header h1 a img {}
+#wrap header .gnb {
+    display: flex; margin-right: 25px; margin-top: 50px;
+    height: 50px; overflow: hidden;
+    transition: all 0.6s ease 0s;
+}
+#wrap header .gnb:hover {
+    height: 170px;
+}
+#wrap header .gnb:hover::after {
+    opacity: 1;
+}
+#wrap header .gnb::after {
+    content: ''; width: 100%; height: 150px;
+    top: 100px; left: 0; background: #9226a6; color: #fff;
+    position: absolute; z-index: -1;
+    opacity: 0; transition: all 0.6s ease 0s;
+}
+#wrap header .gnb > li {}
+#wrap header .gnb li:hover > a{
+    background: #000; color: #fff;
+}
+#wrap header .gnb > li > a {
+    width: 180px; height: 50px;
+    display: flex; justify-content: center; align-items: center;
+}
+#wrap header .gnb > li .lnb {
+    color: #fff;
+}
+#wrap header .gnb > li .lnb li {}
+#wrap header .gnb > li .lnb li a {
+    width: 180px; height: 30px;
+    display: flex; justify-content: center; align-items: center;
+}
+/* 슬라이드 */
+#wrap .slide_wrap {
+    width: 1200px; height: 300px; margin: 0 auto;
+}
+#wrap .slide_wrap .slide_wrapper {
+    width: 100%; height: 100%;
+    position: relative;
+}
+#wrap .slide_wrap .slide_wrapper .slide {
+    position: absolute; left: 0; top: 0;
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+}
+#wrap .slide_wrap .slide_wrapper .slide.active {
+    opacity: 1;
+}
+/* 컨텐츠 */
+#wrap .contents {
+    width: 1200px; height: 200px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+}
+#wrap .contents section {
+    flex: 1; padding: 10px 6px;
+}
+#wrap .contents section ul {
+    padding: 16px 6px; border: 1px solid #9226a6;
+}
+#wrap .contents section > h2 {
+    padding: 6px 12px; display: inline-block;
+    border: 1px solid #9226a6; border-bottom: none;
+    font-size: 1.2rem; font-weight: 600;
+}
+#wrap .contents section .notice {}
+#wrap .contents section .notice > li {
+    display: flex; justify-content: space-between;
+    line-height: 1.8; font-size: 0.9rem;
+}
+#wrap .contents section .notice > li > a {}
+#wrap .contents section .notice > li > span {}
+#wrap .contents section .gallery {
+    display: flex; justify-content: center; align-items: center;
+    gap: 16px;
+}
+#wrap .contents section:nth-child(2) h2 {
+    background: #9226a6; color: #fff;
+}
+#wrap .contents section .gallery > li {}
+#wrap .contents section .gallery > li > a {}
+#wrap .contents section .gallery > li > a img {
+    width: 100px; height: 100px;
+}
+#wrap .contents section .gallery > li > a img:hover {
+    opacity: 0.8;
+}
+#wrap .contents .direct {
+    background-image: url(../images/direct.jpg); background-size: cover;
+    display: flex; justify-content: center; align-items: center;
+}
+#wrap .contents .direct > a {
+    background: #9226a6; padding: 10px 20px; color: #fff;
+}
+/* 팝업 */
+#wrap .popup {
+    position: fixed; width: 500px; height: 250px;
+    z-index: 999; background: #fff; border: 1px solid #000;
+    padding: 20px; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    display: none;
+}
+#wrap .popup.active {
+    display: block;
+}
+#wrap .popup > h2 {}
+#wrap .popup > p {
+    line-height: 1.6; margin-top: 30px;
+}
+#wrap .popup > #close {
+    position: absolute; right: 25px; bottom: 25px;
+    padding: 10px 20px; cursor: pointer;
+}
+/* footer */
+#wrap footer {
+    width: 1200px; height: 100px;
+    margin: 0 auto; background: #000; color: #fff;
+    display: flex; align-items: center;
+}
+#wrap footer .menu_box {
+    text-align: center; margin: 0 auto;
+}
+#wrap footer .menu_box .menu {
+    display: flex; justify-content: center; gap: 20px;
+}
+#wrap footer .menu_box .menu > li {}
+#wrap footer .menu_box .menu > li a {
+    text-decoration: underline;
+}
+#wrap footer .menu_box .copy {
+    font-size: 0.88rem; margin-top: 12px;
+}
+#wrap footer form {}
+#wrap footer form #family {}
+#wrap footer form #family option {}
